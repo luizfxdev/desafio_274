@@ -59,9 +59,9 @@ Experimente estas entradas com resultados positivos:
 
  13, 17, 19, 23, 103 → Anéis especiais: **13, 103**
 
-2, 3, 5, 7, 11, 101 → Anéis especiais: ** 2, 3, 11, 101 **
+2, 3, 5, 7, 11, 101 → Anéis especiais: **2, 3, 11, 101**
 
-1, 4, 17, 29, 107 → Anel especial: ** 107 **
+1, 4, 17, 29, 107 → Anel especial: **107**
 
 ## 🧠 Lógica Implementada
 
@@ -90,7 +90,7 @@ UI/UX Acessível
 ## 📜 Licença
 Este projeto está sob a licença MIT. Sinta-se livre para explorar e modificar o código!
 
-** Que a magia dos anéis de Eldoria guie sua jornada de codificação! ✨ **
+**Que a magia dos anéis de Eldoria guie sua jornada de codificação!** ✨ 
 
 
 Desenvolvido com ♥ para os aventureiros do código.
