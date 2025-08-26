@@ -57,7 +57,7 @@ DESAFIO_274/
 
 Experimente estas entradas com resultados positivos:
 
- 13, 17, 19, 23, 103 → Anéis especiais: ** 13, 103 **
+ 13, 17, 19, 23, 103 → Anéis especiais: **13, 103**
 
 2, 3, 5, 7, 11, 101 → Anéis especiais: ** 2, 3, 11, 101 **
 
