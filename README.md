@@ -12,15 +12,15 @@ Cada anel possui um número mágico, e o anel especial é aquele que:
 
 Seu quadrado invertido é divisível pelo número original
 
-## 🧪 Exemplo
+## 🧪 Exemplo:
 
-O número mágico 13 é especial porque:
+O anel 2 é especial porque:
 
-13 é primo
+2 é primo.
 
-13² = 169 → Invertido = 961
+2² = 4 → invertido = 4.
 
-961 ÷ 13 = 74 (número inteiro)
+4 ÷ 2 = 2 → inteiro ✅
 
 
 ## 📁 Estrutura do Projeto
