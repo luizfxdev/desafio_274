@@ -1,0 +1,299 @@
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CORREÇÃO PRINCIPAL - Permite rolagem na página */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden; /* Remove rolagem horizontal */
+  overflow-y: auto; /* Permite rolagem vertical */
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+body {
+  background: url('/images/background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8f8f8;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: flex-start; /* Alinha à esquerda */
+}
+
+/* Container principal - POSICIONADO À ESQUERDA CENTRAL */
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(10, 10, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-left: 20px; /* Espaço da borda esquerda */
+  margin-bottom: 40px; /* Espaço na parte inferior */
+  transition: all 0.3s ease;
+  /* Para permitir rolagem quando necessário */
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: gold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  font-size: 2rem;
+}
+
+/* Descrição */
+.description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Input */
+.input-container {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background: rgba(20, 20, 40, 0.8);
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Área dos botões */
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* NOVA SEÇÃO - Área de resultados com rolagem */
+.calculation-steps {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  max-height: 70vh; /* Altura máxima de 70% da tela */
+  overflow-y: auto; /* Rolagem vertical quando necessário */
+  overflow-x: hidden; /* Remove rolagem horizontal */
+  padding-right: 10px; /* Espaço para a barra de rolagem */
+}
+
+/* Barra de rolagem personalizada */
+.calculation-steps::-webkit-scrollbar {
+  width: 8px;
+}
+
+.calculation-steps::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.calculation-steps::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4a9eff, #66ff66);
+  border-radius: 10px;
+  border: 2px solid rgba(10, 10, 30, 0.5);
+}
+
+.calculation-steps::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #66ff66, gold);
+}
+
+/* Para Firefox */
+.calculation-steps {
+  scrollbar-width: thin;
+  scrollbar-color: #4a9eff rgba(255, 255, 255, 0.1);
+}
+
+.calculation-steps .special-result {
+  background: rgba(255, 215, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid gold;
+  margin-top: 15px;
+}
+
+.calculation-steps .special-result strong {
+  color: gold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.calculation-steps .special-result div {
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.final-result.highlight {
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 20px gold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    justify-content: center; /* Centraliza em mobile */
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    margin-left: 0; /* Remove margem esquerda em mobile */
+  }
+
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  /* Ajusta altura da rolagem em mobile */
+  .calculation-steps {
+    max-height: 50vh;
+  }
+}
+
+/* Estilização dos botões */
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Área de resultado */
+.result-container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.result-title {
+  color: gold;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.step {
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.step:before {
+  content: '➔';
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+.final-result {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gold;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid gold;
+}

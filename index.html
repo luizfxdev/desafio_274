@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anéis Perdidos de Eldoria</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Anéis Perdidos de Eldoria</h1>
+
+      <div class="description">
+        <p>
+          No reino mágico de Eldoria, existem poderosos anéis encantados que foram perdidos durante a última guerra
+          contra os dragões. Sua missão é encontrar qual anel entre eles tem um poder especial!
+        </p>
+        <br />
+        <p>Digite a lista de números separados por vírgula, ex: 15, 16, 13, 23, 29</p>
+      </div>
+
+      <div class="input-container">
+        <input type="text" id="numbersInput" placeholder="Ex: 15, 16, 13, 23, 29" />
+      </div>
+
+      <div class="buttons-container">
+        <button class="glow-on-hover" id="findButton" type="button">ENCONTRAR</button>
+        <button class="glow-on-hover" id="returnButton" type="button">RETORNAR</button>
+      </div>
+
+      <div class="result-container">
+        <div class="result-title">Resultado da Busca</div>
+        <div class="calculation-steps" id="calculationSteps">
+          <!-- Os passos do cálculo serão inseridos aqui via JavaScript -->
+          Digite os números e clique em ENCONTRAR para verificar os anéis.
+        </div>
+        <div class="final-result" id="finalResult">
+          <!-- O resultado final será inserido aqui via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
